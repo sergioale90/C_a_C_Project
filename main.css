@@ -1,11 +1,13 @@
 nav { 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    max-width: 2000px;
 }
 
 .carousel-caption{ 
     text-align: end;
     margin-left: 20%;
     margin-bottom: 5%;
+    position: absolute;
 }
 
 img { 
@@ -14,7 +16,7 @@ img {
 
 h2 {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-size:  30px;
 }
 
@@ -35,6 +37,9 @@ h6 {
     font-size: xx-large;
 }
 
+#bsas {
+    text-align: end;
+}
 p {
     text-align: center;
     margin-top: 4px;
@@ -67,4 +72,16 @@ p {
 
 .btn-block {
     width: 325px;
-  }
+}
+
+input:invalid {
+    border: 2px solid rgb(196, 27, 27);
+}
+  
+input:invalid:required {
+    border: solid rgb(175, 175, 175);
+}
+  
+input:valid {
+    border: inset green;
+}
