@@ -1,13 +1,13 @@
-nav { 
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    max-width: 2000px;
+nav {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  max-width: 2000px;
 }
 
-.carousel-caption{ 
-    text-align: end;
-    margin-left: 20%;
-    margin-bottom: 5%;
-    position: absolute;
+.carousel-caption {
+  text-align: end;
+  margin-left: 20%;
+  margin-bottom: 5%;
+  position: absolute;
 }
 
 img {
@@ -15,9 +15,9 @@ img {
 }
 
 h2 {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    font-size:  30px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-size: 30px;
 }
 
 h3 {
@@ -38,7 +38,7 @@ h6 {
 }
 
 #bsas {
-    text-align: end;
+  text-align: end;
 }
 p {
   text-align: center;
@@ -72,17 +72,17 @@ p {
 }
 
 .btn-block {
-    width: 325px;
+  width: 325px;
 }
 
 input:invalid {
-    border: 2px solid rgb(196, 27, 27);
+  border: 2px solid rgb(196, 27, 27);
 }
-  
+
 input:invalid:required {
-    border: solid rgb(175, 175, 175);
+  border: solid rgb(175, 175, 175);
 }
-  
+
 input:valid {
-    border: inset green;
+  border: inset green;
 }
