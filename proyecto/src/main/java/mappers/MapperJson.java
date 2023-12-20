@@ -1,11 +1,11 @@
-package edu.codoacodo.mappers;
+package mappers;
 
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import edu.codoacodo.modelos.Orador;
+import modelos.Orador;
 
 public class MapperJson {
     ObjectMapper mapper;
@@ -27,8 +27,7 @@ public class MapperJson {
             try {
                 listaOradoresString.append(mapper.writeValueAsString(listaOradores.get(i)));
                 if (i < listaOradores.size() - 1) {
-                    listaOradoresString.append(",");
-                }
+                    listaOradoresString.append(",");         }
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }

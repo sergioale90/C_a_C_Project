@@ -1,19 +1,21 @@
-package edu.codoacodo.infrastructure.persistence.memory;
+package infrastructura.persistencia.memory;
 
 import java.util.ArrayList;
 
-import edu.codoacodo.infrastructure.IPersistencia;
-import edu.codoacodo.modelos.Orador;
+import infrastructura.IPersistencia;
+import modelos.Orador;
 
 public class MemoryRepositoryImpl implements IPersistencia {
-
     private static ArrayList<Orador> bdMemoria = new ArrayList<>();
 
     @Override
     public void guardar(Orador newOrador) {
-        if(MemoryRepositoryImpl.bdMemoria.add(newOrador)) {
-            System.out.println("Orador " + newOrador.getApellido()+ " fue grabado exitosamente con el id : " + newOrador.getId() + ", idUUID: " + newOrador.getIdOrador());
-        }
+    if(newOrador != null){
+        bdMemoria.add(newOrador);
+        System.out.println("Orador guardado exitosamente.");
+    } else{
+        System.out.println("El orador proporcionado es nulo.");
+    }
     }
 
     @Override
@@ -34,5 +36,4 @@ public class MemoryRepositoryImpl implements IPersistencia {
     @Override
     public void delete(String id) {
     }
-    
 }

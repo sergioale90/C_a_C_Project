@@ -1,8 +1,8 @@
-package edu.codoacodo.infrastructure;
+package infrastructura;
 
 import java.util.ArrayList;
 
-import edu.codoacodo.modelos.Orador;
+import modelos.Orador;
 
 public interface IPersistencia {
     // CRUD //
@@ -15,4 +15,4 @@ public interface IPersistencia {
     Orador update(String orador);
     // DELETE
     void delete(String id);
-};
+}
