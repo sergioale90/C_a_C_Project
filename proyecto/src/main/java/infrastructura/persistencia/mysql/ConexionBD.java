@@ -12,10 +12,10 @@ public class ConexionBD {
         String username = "root";
         String password = "$ersistel4713088013";
         String nombreDB = "proyecto_cac";
-        String driverClassName = "com.mysql.cj.jdbc.Driver";
+        String driverClassName = "com.mysql.jdbc.Driver";
         try {
             Class.forName(driverClassName);
-            String url = "jdbc:mysql://" + host + ":" + port + "/" + nombreDB;
+            String url = "jdbc:mysql://localhost:3306/proyecto_cac";
             connection = DriverManager.getConnection(url, username, password);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();

@@ -142,29 +142,26 @@
   <p>Anotate como un orador para dar una <abbr title="attribute">charla ignite</abbr>.¡Cuentanos de que quieres hablar!
   </p><br>
   <form role="form" action="endpoint" method="POST">
-    <div class="form-group row g-sm-2 align-content-center">
+    <div class="row g-sm-2 align-content-center" role="form" action="endpoint" method="post">
       <div class="col-6">
-        <input id="Nombre" type="text" class="form-control" placeholder="Nombre" aria-label="First name"
-          name="nombreInput" required>
+        <input type="text" class="form-control" placeholder="Nombre" id="Nombre" aria-label="First name" required>
       </div>
       <div class="col-6">
-        <input id="Apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Last name"
-          name="apellidoInput" required>
+        <input type="text" class="form-control" placeholder="Apellido" id="Apellido" aria-label="Last name" required>
       </div>
       <div class="col-6">
-        <input id="email" type="email" class="form-control" placeholder="Correo Electronico" aria-label="Email"
-          name="emailInput" required>
+        <input type="email" class="form-control" placeholder="Correo Electronico" id="email" aria-label="Email"
+          required>
       </div>
       <div class="col-6">
-        <input id="Telefono" type="telNo" class="form-control" placeholder="Teléfono" aria-label="phone" minlength="9"
-          size="20" name="telefonoInput" required>
+        <input type="telNo" class="form-control" placeholder="Teléfono" id="Telefono" aria-label="phone" minlength="9"
+          size="20" required>
       </div>
       <label for="exampleFormControlTextarea1" class="form-label"></label>
-      <textarea class="form-control" id="Tema" rows="3" placeholder="¿Sobre que quieres hablar?"
-        name="temaInput"></textarea>
+      <textarea class="form-control" id="Tema" rows="3" placeholder="¿Sobre que quieres hablar?"></textarea>
       <h4>Recuerda incluir un titulo para tu charla</h4>
       <div class="d-grid gap-2">
-        <button class="btn btn-success" type="button submit" onclick="enviarDatos();">Enviar</button>
+        <button class="btn btn-success" type="submit" onclick="enviarDatos()">Enviar</button>
       </div>
     </div>
   </form>

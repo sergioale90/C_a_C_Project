@@ -20,3 +20,9 @@ function enviarDatos() {
   telefono.value = "";
   tema.value = "";
 }
+function mostrarMensaje(mensaje) {
+  var mensajeDiv = document.createElement("div");
+  mensajeDiv.textContent = mensaje;
+  mensajeDiv.className = "mensaje";
+  document.body.appendChild(mensajeDiv);
+}
