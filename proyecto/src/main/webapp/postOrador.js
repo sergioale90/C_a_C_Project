@@ -6,7 +6,7 @@ function enviarDatos() {
   const telefono = document.getElementById("Telefono").value;
   const tema = document.getElementById("Tema").value;
   fetch(
-    `src/main/java/controlador/Controlador?nombre=${nombre}&apellido=${apellido}&email=${email}&telefono=${telefono}&tema=${tema}`,
+    `endpoint?nombreInput=${nombre}&apellidoInput=${apellido}&emailInput=${email}&telefonoInput=${telefono}&temaInput=${tema}`,
     { method: "POST" }
   )
     .then((response) => response.json())

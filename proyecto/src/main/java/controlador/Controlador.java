@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,7 @@ import infrastructura.persistencia.memory.MemoryRepositoryImpl;
 import mappers.MapperJson;
 import modelos.Orador;
 
+@WebServlet("/endpoint")
 public class Controlador extends HttpServlet {
         private static final long serialVersionUID = 1L;
     private IPersistencia persistence = new MemoryRepositoryImpl();
@@ -28,9 +30,10 @@ public class Controlador extends HttpServlet {
         String nombre = request.getParameter("nombreInput");
         String apellido = request.getParameter("apellidoInput");
         String email = request.getParameter("emailInput");
+        String telefono = request.getParameter("telefonoInput");
         String tema = request.getParameter("temaInput");
 
-        Orador orador = new Orador (nombre, apellido, email, tema);
+        Orador orador = new Orador (nombre, apellido, email, telefono, tema);
         persistence.guardar(orador);
     String usarioJson = mapper.toJson(orador);
     response.getWriter().write(usarioJson);

@@ -5,14 +5,16 @@ public class Orador {
     private String apellido;
     private String email;
     private String tema;
+    private String telefono;
     private boolean estado;
     private String id;
     private String fechaAlta;
 
-    public Orador(String nombre, String apellido, String email, String tema) {
+    public Orador(String nombre, String apellido, String email, String telefono, String tema) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
+        this.telefono = telefono;
         this.tema = tema;
         estado = true;
     }
@@ -58,10 +60,16 @@ public class Orador {
     public void setFechaAlta(String fechaAlta) {
         this.fechaAlta = fechaAlta;
     }
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+    public String getTelefono() {
+        return telefono;
+    }
     @Override
     public String toString() {
         return "Orador [nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", tema=" + tema
-                + ", estado=" + estado + ", id=" + id + ", fechaAlta=" + fechaAlta + "]";
+                + ", estado=" + estado  + ", telefono=" + telefono + ", id=" + id + ", fechaAlta=" + fechaAlta + "]";
     }
 
 }
