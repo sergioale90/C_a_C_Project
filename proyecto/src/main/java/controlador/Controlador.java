@@ -34,6 +34,7 @@ public class Controlador extends HttpServlet {
         String tema = request.getParameter("temaInput");
 
         Orador orador = new Orador (nombre, apellido, email, telefono, tema);
+        System.out.println(orador.getApellido());
         persistence.guardar(orador);
     String usarioJson = mapper.toJson(orador);
     response.getWriter().write(usarioJson);

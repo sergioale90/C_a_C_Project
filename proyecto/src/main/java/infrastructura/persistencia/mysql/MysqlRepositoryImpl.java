@@ -16,14 +16,15 @@ public class MysqlRepositoryImpl implements IPersistencia {
 
     @Override
     public void guardar(Orador orador) {
-        String query = "INSERT INTO oradores (nombre, apellido, email, tema, estado) VALUES (?,?,?,?,?)";
+        String query = "INSERT INTO oradores (nombre, apellido, email, telefono, tema, estado) VALUES (?,?,?,?,?,?)";
         try {
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, orador.getNombre());
-            statement.setString(2, orador.getApellido());
-            statement.setString(3, orador.getEmail());
-            statement.setString(4, orador.getTema());
-            statement.setBoolean(6, orador.isEstado());
+            statement.setString(2, orador.getNombre());
+            statement.setString(3, orador.getApellido());
+            statement.setString(4, orador.getEmail());
+            statement.setString(5, orador.getTelefono());
+            statement.setString(6, orador.getTema());
+            statement.setBoolean(8, orador.isEstado());
             statement.execute();
         } catch (SQLException e){
             e.printStackTrace();
